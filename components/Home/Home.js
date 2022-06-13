@@ -3,6 +3,7 @@ import AboutMeSection from "../Sections/AboutMe/AboutMeSection";
 import ExperienceSection from "../Sections/Experience/ExperienceSection";
 import ProjectsSection from "../Sections/Projects/ProjectSection";
 import ContactSection from "../Sections/Contact/ContactSection";
+import Footer from "../Footer/Footer";
 
 const Home = (props) => {
     const userInfo = props.userInfo;
@@ -14,6 +15,13 @@ const Home = (props) => {
             <ExperienceSection></ExperienceSection>
             <ProjectsSection></ProjectsSection>
             <ContactSection></ContactSection>
+            <Footer 
+            showIcons={props.showIcons}
+            github={userInfo.github} 
+            linkedin={userInfo.linkedin} 
+            twitter={userInfo.twitter}
+            instagram={userInfo.instagram}
+            ></Footer>
         </div>
     )
 };

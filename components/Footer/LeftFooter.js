@@ -5,6 +5,7 @@ const LeftFooter = (props) => {
         <div className='fixed bottom-24 left-16'>
           <div className='flex-col items-center relative'>
             <IconList
+              col={true}
               github={props.github} 
               linkedin={props.linkedin} 
               twitter={props.twitter}

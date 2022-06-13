@@ -3,6 +3,8 @@ import Heading from "../../UI/Heading";
 import SectionCard from "../../UI/SectionCard";
 import ProjectGrid from "./ProjectGrid";
 
+import { Element } from "react-scroll";
+
 const ProjectsSection = () => {
 
     const [isLoading, setIsLoading] = useState(true);
@@ -25,14 +27,16 @@ const ProjectsSection = () => {
     if (isLoading){
         return (
             <SectionCard>
-            <Heading idx="03" item="Featured Projects"></Heading>
+            <Element name="project"></Element>
+            <Heading idx="03" item="Featured Projects" id={"ProjectsSection"}></Heading>
             </SectionCard>
         );
     }
 
     return (
         <SectionCard>
-            <Heading idx="03" item="Featured Projects"></Heading>
+            <Element name="project"></Element>
+            <Heading idx="03" item="Featured Projects" id={"ProjectsSection"}></Heading>
             <ProjectGrid projData={projectData}></ProjectGrid>
         </SectionCard>
     );

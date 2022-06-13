@@ -6,6 +6,8 @@ import Company from "./Company";
 import Job from "./Job";
 import JobDesc from "./JobDesc";
 
+import { Element } from "react-scroll";
+
 const ExperienceSection = (props) => {
     
     const [isLoading, setIsLoading] = useState(true);
@@ -44,14 +46,16 @@ const ExperienceSection = (props) => {
     if(isLoading){
         return (
             <SectionCard>
-                <Heading idx="02" item="Experience"></Heading>
+                <Element name="experience"></Element>
+                <Heading idx="02" item="Experience" id={"ExperienceSection"}></Heading>
             </SectionCard>
         );
     }
 
     return (
         <SectionCard>
-            <Heading idx="02" item="Experience"></Heading>
+            <Element name="experience"></Element>
+            <Heading idx="02" item="Experience" id={"ExperienceSection"}></Heading>
             <div className="flex">
                 <div className="flex-col px-2">{
                     expData.map((exp, idx) => {

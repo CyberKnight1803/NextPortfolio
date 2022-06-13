@@ -4,9 +4,7 @@ import NavBar from "../components/NavBar/NavBar";
 import Home from "../components/Home/Home";
 import LeftFooter from "../components/Footer/LeftFooter";
 import RightFooter from "../components/Footer/RightFooter";
-import Footer from "../components/Footer/Footer";
 import clientPromise from "../lib/mongodb";
-
 
 const HomePage = (props) => {
 
@@ -53,20 +51,19 @@ const HomePage = (props) => {
 
 
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen w-full">
       <NavBar></NavBar>
-      <div className="flex items-center p-8">
-      {displayContent && <LeftFooter 
-                            github={userDetails.github} 
-                            linkedin={userDetails.linkedin} 
-                            twitter={userDetails.twitter}
-                            instagram={userDetails.instagram}>
-                          </LeftFooter>
-      }
-        <Home userInfo={userDetails}></Home>
-      {displayContent && <RightFooter></RightFooter>}
-      </div>
-      <Footer></Footer>
+        <div className="flex items-center p-8">
+          {displayContent && <LeftFooter 
+                                github={userDetails.github} 
+                                linkedin={userDetails.linkedin} 
+                                twitter={userDetails.twitter}
+                                instagram={userDetails.instagram}>
+                              </LeftFooter>
+          }
+            <Home userInfo={userDetails} showIcons={displayContent}></Home>
+          {displayContent && <RightFooter></RightFooter>}
+        </div>
     </div>
   );
 };

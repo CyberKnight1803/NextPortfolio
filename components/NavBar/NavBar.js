@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 
 import NavBarHome from "./NavBarHome";
 import NavItems from "./NavItems";
-import ResumeButton from "./ResumeButton";
+
 
 
 const NavBar = (props) => {
@@ -35,7 +35,7 @@ const NavBar = (props) => {
     }, [lastScrollY]);
 
     return (
-        <header className={`w-full p-8 ${show && 'sticky top-0 z-10 bg-opacity-75 shadow-xl backdrop-blur-md'}`}>
+        <header className={`w-full p-8 ${show && 'sticky top-0 z-30 bg-opacity-75 shadow-xl backdrop-blur-md'}`}>
             <div className="flex justify-between text-xl font-light" >
                 <NavBarHome></NavBarHome>
                 <NavItems></NavItems>
