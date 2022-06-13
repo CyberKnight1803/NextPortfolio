@@ -3,7 +3,7 @@ import IconList from "./IconList";
 const Footer = (props) => {
 
     const iconComponent = (
-        <div className="flex">
+        <div className="flex items-center justiy-center w-full">
             <IconList
               col={false}
               github={props.github} 

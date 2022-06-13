@@ -3,7 +3,7 @@ import { faGithub, faLinkedinIn, faTwitter, faInstagram} from "@fortawesome/free
 
 
 const IconList = (props) => {
-    let iconListClass = "flex items-center justify-center";
+    let iconListClass = "flex items-center justify-center w-full";
     if (props.col){
         iconListClass = "flex flex-col items-center";
     }
