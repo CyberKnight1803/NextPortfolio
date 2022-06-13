@@ -2,6 +2,7 @@ import NavItem from "./NavItem";
 import ResumeButton from "./ResumeButton";
 
 const NavItems = () => {
+
     return (
         <div className="flex pr-8">
             <ul className="flex p-3">

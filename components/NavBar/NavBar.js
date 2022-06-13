@@ -5,7 +5,7 @@ import NavItems from "./NavItems";
 import ResumeButton from "./ResumeButton";
 
 
-const NavBar = () => {
+const NavBar = (props) => {
 
     const [show, setShow] = useState(true);
     const [lastScrollY, setLastScrollY] = useState(0);

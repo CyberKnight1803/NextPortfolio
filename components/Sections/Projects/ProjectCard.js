@@ -6,7 +6,7 @@ import { faFolder } from "@fortawesome/free-regular-svg-icons";
 const ProjectCard = (props) => {
 
     const link = (
-        <a href={props.deployedLink} className="mr-3">
+        <a href={props.deployedLink} className="mr-8 tablet:mr-4">
             <FiLink2 className="text-4xl tablet:text-2xl text-gray-400 hover:text-green-200"/>
         </a>
     );

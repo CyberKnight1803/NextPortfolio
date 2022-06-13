@@ -19,7 +19,7 @@ const AboutMeSection = (props) => {
 
                 </div>
                 <div className="w-1/2 p-4 tablet:p-4 tablet:pl-16 ml-8">
-                    <img className="rounded-3xl   object-contain" src="https://pbs.twimg.com/media/Db5Z5TUU8AAcIGL.jpg" alt="Omkar Profile PIC">
+                    <img className="rounded-3xl object-contain" src="/pics/profile.png" alt="Omkar Profile PIC">
                     </img>
                 </div>
             </div>

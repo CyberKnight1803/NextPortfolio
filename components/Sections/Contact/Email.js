@@ -1,7 +1,7 @@
 const EmailSection = () => {
     return (
-        <div className="flex-col items-center justify-center p-2 m-2 w-4/5">
-            <form className="flex-col items-center justify-center p-2 w-full">
+        <div className="flex flex-col items-center justify-center p-2 m-2 w-4/5">
+            <form className="flex flex-col items-center justify-center p-2 w-full">
                 <div className="w-4/5">
                     <input 
                     type="email" 
