@@ -10,11 +10,11 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        roboto: "'Roboto Mono'",
-        dm_mono: "'DM Mono'", 
-        archia_bold: "'archia-bold'", 
-        archia: "'archia'", 
-        archiasemibold: "'archia_semibold'", 
+        roboto: "Roboto Mono",
+        dm_mono: "DM Mono", 
+        archia_bold: "archia-bold", 
+        archia: "archia", 
+        archiasemibold: "archia_semibold", 
         sans: [
           'Inter',
           '-apple-system',
