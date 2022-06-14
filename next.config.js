@@ -3,8 +3,9 @@ const nextConfig = {
   reactStrictMode: true,
   env:{
     mongodb: process.env.MONGODB_URI,
-    email: process.env.EMAIL, 
-    pass: process.env.PASSWORD 
+    SENDER_EMAIL: process.env.SENDER_EMAIL, 
+    PASSWORD: process.env.PASSWORD, 
+    RECIEVER_EMAIL: process.env.RECIEVER_EMAIL
   }
 }
 
