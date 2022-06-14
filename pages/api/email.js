@@ -11,6 +11,18 @@ const handler = async (req, res) => {
         secure: true
     });
 
+    await new Promise ((resolve, reject) => {
+        transporter.verify((error, success) => {
+            if (error) {
+                console.log(error);
+                reject(error);
+            } else {
+                console.log("Server is ready to take our messages");
+                resolve(success);
+            }
+        });
+    });
+
     switch(req.method){
         case "GET":
             break;
@@ -23,9 +35,15 @@ const handler = async (req, res) => {
                 text: req.body.message,
             };
 
-            await transporter.sendMail(mailData, (err, _info) => {
-                if (err)
-                    console.log(err);
+            await new Promise ((resolve, reject) => {
+                transporter.sendMail(mailData, (err, info) => {
+                    if (err){
+                        console.log(err);
+                        reject(err);
+                    }
+                    else
+                        resolve(info);
+                });
             });
             res.json({status: 200});
             break;
