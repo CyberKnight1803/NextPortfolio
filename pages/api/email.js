@@ -23,7 +23,7 @@ const handler = async (req, res) => {
                 text: req.body.message,
             };
 
-            transporter.sendMail(mailData, (err, _info) => {
+            await transporter.sendMail(mailData, (err, _info) => {
                 if (err)
                     console.log(err);
             });
