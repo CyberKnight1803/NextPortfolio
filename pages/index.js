@@ -6,27 +6,11 @@ import LeftFooter from "../components/Footer/LeftFooter";
 import RightFooter from "../components/Footer/RightFooter";
 import clientPromise from "../lib/mongodb";
 
+import Head from "next/head";
+
 const HomePage = (props) => {
 
   const userDetails = JSON.parse(props.userDetails);
-
-  // const [userInfo, setUserInfo] = useState({
-  //   username: "", 
-  //   aboutme: "", 
-  //   techstack: ""
-  // });
-
-
-  // useEffect(() => {
-  //     fetch('/api/about', {
-  //         method: 'GET', 
-  //         headers: {
-  //             'Content-Type': 'application/json'
-  //         }
-  //     })
-  //     .then(response => response.json())
-  //     .then(data => setUserInfo(data.userInfo[0]));
-  // }, []);
 
   const [displayContent, setDisplayContent] = useState(true);
 
@@ -51,20 +35,27 @@ const HomePage = (props) => {
 
 
   return (
-    <div className="flex flex-col min-h-screen w-full">
-      <NavBar></NavBar>
-        <div className="flex items-center p-8">
-          {displayContent && <LeftFooter 
-                                github={userDetails.github} 
-                                linkedin={userDetails.linkedin} 
-                                twitter={userDetails.twitter}
-                                instagram={userDetails.instagram}>
-                              </LeftFooter>
-          }
-            <Home userInfo={userDetails} showIcons={displayContent}></Home>
-          {displayContent && <RightFooter></RightFooter>}
-        </div>
-    </div>
+    <>
+      <Head>
+        <title>Omkar | CyberKnight</title>
+        <meta charSet="utf-8"></meta>
+        <meta name="viewport" content="width=device-width"></meta>
+      </Head>
+      <div className="flex flex-col min-h-screen overflow-visible">
+        <NavBar displayContent={displayContent}></NavBar>
+          <div className="flex items-center p-8">
+            {displayContent && <LeftFooter 
+                                  github={userDetails.github} 
+                                  linkedin={userDetails.linkedin} 
+                                  twitter={userDetails.twitter}
+                                  instagram={userDetails.instagram}>
+                                </LeftFooter>
+            }
+              <Home userInfo={userDetails} showIcons={displayContent}></Home>
+            {displayContent && <RightFooter></RightFooter>}
+          </div>
+      </div>
+    </>
   );
 };
 

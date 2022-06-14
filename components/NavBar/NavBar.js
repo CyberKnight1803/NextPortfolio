@@ -2,8 +2,8 @@ import { useState, useEffect } from "react";
 
 import NavBarHome from "./NavBarHome";
 import NavItems from "./NavItems";
-
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faBars } from "@fortawesome/free-solid-svg-icons";
 
 const NavBar = (props) => {
 
@@ -35,12 +35,13 @@ const NavBar = (props) => {
     }, [lastScrollY]);
 
     return (
-        <header className={`w-full p-8 ${show && 'sticky top-0 z-30 bg-opacity-75 shadow-xl backdrop-blur-md'}`}>
-            <div className="flex justify-between text-xl font-light" >
+        <div className={`table w-full p-8 ${show && 'sticky top-0 z-30 bg-opacity-75 shadow-xl backdrop-blur-md'}`}>
+            <div className={`flex justify-between text-xl font-light`} >
                 <NavBarHome></NavBarHome>
                 <NavItems></NavItems>
+                {/* {!props.displayContent && <FontAwesomeIcon icon={faBars} className="text-green-200"></FontAwesomeIcon>} */}
             </div>
-        </header>
+        </div>
     );
 };
 

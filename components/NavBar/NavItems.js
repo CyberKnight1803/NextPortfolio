@@ -1,7 +1,7 @@
 import NavItem from "./NavItem";
 import ResumeButton from "./ResumeButton";
 
-const NavItems = () => {
+const NavItems = (props) => {
 
     return (
         <div className="flex pr-8">
