@@ -19,7 +19,11 @@ const ProjectCard = (props) => {
                 </div>
                 <div className="flex mr-2">
                     {props.isDeployed && link}
-                    <a href={props.github}>
+                    <a 
+                        href={props.github}
+                        target="_blank"
+                        rel="noreferrer"
+                    >
                         <FiGithub className="text-4xl tablet:text-2xl text-gray-400 hover:text-green-200"></FiGithub>
                     </a>
                 </div>
