@@ -16,7 +16,7 @@ const ProjectCard = (props) => {
     );
 
     return (
-        <div className="bg-[#131e37] rounded-3xl tablet:rounded-xl shadow-xl p-2 my-8 mr-8 tablet:m-1 tablet:w-full tablet: h-full">
+        <div className="bg-[#131e37] rounded-3xl tablet:rounded-xl shadow-xl p-2 my-8 mr-8 tablet:m-1 tablet:w-full tablet: h-full transition transform hover:scale-105 hover:text-green-200">
             <div className="flex justify-between p-2 p-2 m-4">
                 <div className="ml-2">
                     <FontAwesomeIcon icon={faFolder} className="text-5xl tablet:text-3xl text-green-200"/>
